@@ -14,4 +14,4 @@ function divide(a, b)  {
     return a / b;
 }
 
-console.log(divide(0 , 0))
+//console.log(divide(0 , 0))

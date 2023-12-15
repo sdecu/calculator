@@ -1,0 +1,49 @@
+:root {
+    --adoblue: #1a202c;
+    --red: #bc4b51;
+    --green: #5B8E7D;
+    --orange: #faa84b;
+    --yellow: #f4e285;
+    --lime: #8cb369;
+    --grey: rgb(121, 121, 121);
+    --blue: rgb(68, 164, 243);
+  }
+
+body    {
+    background-color: var(--adoblue);
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+div {
+    border: thick double var(--red);
+
+}
+
+.calculator {
+width: 40em;
+height: 60em;
+}
+
+.display    {
+    width: 90%;
+    height: 12%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.numbers    {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+.button    {
+    display: flex;
+    width: auto;
+    height: 50px;
+    background-color: var(--grey);
+    justify-content: center;
+    align-items: center;
+}
