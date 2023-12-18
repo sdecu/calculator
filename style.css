@@ -35,11 +35,11 @@ height: 60em;
 
 .numbers    {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     
 }
 
-.button    {
+.num-btn    {
     display: flex;
     width: auto;
     height: 50px;
