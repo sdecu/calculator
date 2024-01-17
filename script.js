@@ -1,23 +1,26 @@
-document.querySelector("1") = one;
-document.querySelector("2") = two;
-document.querySelector("3") = three;
-document.querySelector("4") = four;
-document.querySelector("5") = five;
-document.querySelector("6") = six;
-document.querySelector("7") = seven;
-document.querySelector("8") = eight;
-document.querySelector("9") = nine;
-document.querySelector("0") = zero;
-document.querySelector("00") = doubleZero;
-document.querySelector("ac") = ac;
-document.querySelector("delete") = erase;
-document.querySelector("%") = remainder;
-document.querySelector("/") = divide;
-document.querySelector("*") = miltiply;
-document.querySelector("-") = minus;
-document.querySelector("+") = plus;
-document.querySelector("=") = equal;
-document.querySelector(".") = decimal;
+let one = document.querySelector(".one");
+let two = document.querySelector("two");
+let three = document.querySelector("three");
+let four = document.querySelector("four");
+let five = document.querySelector("five");
+let six = document.querySelector("six");
+let seven = document.querySelector("seven");
+let eight = document.querySelector("eight");
+let nine = document.querySelector("nine");
+let zero = document.querySelector("zero");
+let doubleZero = document.querySelector("doubleZero");
+let ac = document.querySelector("ac");
+let erase = document.querySelector("erase");
+let remainder = document.querySelector("remainder");
+let divider = document.querySelector("divide");
+let multiplier = document.querySelector("multiply");
+let minus = document.querySelector("minus");
+let plus = document.querySelector("plus");
+let equal = document.querySelector("equal");
+let decimal = document.querySelector("decimal");
+let para = document.querySelector("div p");
+
+one.addEventListener("click", (event) => {para.innerText="1"});
 
 
 
@@ -37,5 +40,8 @@ function divide(a, b)  {
     return a / b;
 }
 
-
+console.log(para);
+/*connect buttons to display to
+connect buttons to function to calculate formula
+*/
 //console.log(divide(0 , 0))
