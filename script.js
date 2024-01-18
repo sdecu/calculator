@@ -44,8 +44,8 @@ doubleZero.addEventListener("click", (event) => {temp = para.innerText;
     para.innerText=`${temp}00`});
 ac.addEventListener("click", (event) => {temp = para.innerText;
     para.innerText=``});
-erase.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}1`});
+erase.addEventListener("click", (event) => {str = para.innerText;
+    para.innerText=`${str.slice(0, str.length - 1)}`});
 remainder.addEventListener("click", (event) => {temp = para.innerText;
     para.innerText=`${temp} % `});
 divider.addEventListener("click", (event) => {temp = para.innerText;
@@ -61,13 +61,6 @@ equal.addEventListener("click", (event) => {temp = para.innerText;
 decimal.addEventListener("click", (event) => {temp = para.innerText;
     para.innerText=`${temp}.`});
 
-
-
-
-function press(a,b) {
-    temp = para.innerText;
-    para.innerText=`${temp}b`
-}
 
 
 function add(a, b)  {
@@ -87,7 +80,7 @@ function divide(a, b)  {
 }
 
 console.log(para);
-/*connect buttons to display to
+/*
 connect buttons to function to calculate formula
 */
 //console.log(divide(0 , 0))
