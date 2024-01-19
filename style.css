@@ -35,6 +35,11 @@ body {
     margin: 5%;
     border: solid var(--red);
     background-color: var(--green);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 100px;
+    font-weight: bolder;
 }
 
 .input {
@@ -44,6 +49,7 @@ body {
 .numbers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    
 
 }
 
@@ -58,6 +64,7 @@ body {
     font-size: large ;
     font-family: 'Anonymous Pro', monospace;
     font-family: 'Lato', sans-serif;
+    font-weight: bolder;
 }
 
 .num-btn.btn {
