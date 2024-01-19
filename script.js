@@ -46,16 +46,59 @@ ac.addEventListener("click", (event) => {temp = para.innerText;
     para.innerText=``});
 erase.addEventListener("click", (event) => {str = para.innerText;
     para.innerText=`${str.slice(0, str.length - 1)}`});
-remainder.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}%`});
-divider.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}/`});
-multiplier.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}*`});
-minus.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}-`});
-plus.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}+`});
+remainder.addEventListener("click", (event) => {str = para.innerText;
+    if (str.includes('-')) {
+        para.innerText = str.replace('-', '%');
+    } else if (str.includes('*')) {
+        para.innerText = str.replace('*', '%');
+    } else if (str.includes('/')) {
+        para.innerText = str.replace('/', '%');
+    } else if (str.includes('+')) {
+        para.innerText = str.replace('+', '%');
+    } else para.innerText=`${str}%`});
+divider.addEventListener("click", (event) => {str = para.innerText;
+    if (str.includes('-')) {
+        para.innerText = str.replace('-', '/');
+    } else if (str.includes('*')) {
+        para.innerText = str.replace('*', '/');
+    } else if (str.includes('+')) {
+        para.innerText = str.replace('+', '/');
+    } else if (str.includes('%')) {
+        para.innerText = str.replace('%', '/');
+    } else para.innerText=`${str}/`});
+multiplier.addEventListener("click", (event) => {str = para.innerText;
+    if (str.includes('-')) {
+        para.innerText = str.replace('-', '*');
+    } else if (str.includes('+')) {
+        para.innerText = str.replace('+', '*');
+    } else if (str.includes('/')) {
+        para.innerText = str.replace('/', '+');
+    } else if (str.includes('%')) {
+        para.innerText = str.replace('%', '*');
+    } else para.innerText=`${str}*`});
+minus.addEventListener("click", (event) => {str = para.innerText;
+    if (str.includes('+')) {
+        para.innerText = str.replace('+', '-');
+    } else if (str.includes('*')) {
+        para.innerText = str.replace('*', '-');
+    } else if (str.includes('/')) {
+        para.innerText = str.replace('/', '-');
+    } else if (str.includes('%')) {
+        para.innerText = str.replace('%', '+');
+    } else para.innerText=`${str}-`});
+plus.addEventListener("click", (event) => {str = para.innerText;
+    if (str.includes('-')) {
+        para.innerText = str.replace('-', '+');
+    } else if (str.includes('*')) {
+        para.innerText = str.replace('*', '+');
+    } else if (str.includes('/')) {
+        para.innerText = str.replace('/', '+');
+    } else if (str.includes('%')) {
+        para.innerText = str.replace('%', '+');
+    } else para.innerText=`${str}+`});
+decimal.addEventListener("click", (event) => {temp = para.innerText;
+    para.innerText=`${temp}.`});
+
 equal.addEventListener("click", (event) => {
     str = para.innerText + ' ';
     if (str.includes('+'))  {
@@ -87,18 +130,8 @@ equal.addEventListener("click", (event) => {
     num3 = num1 % num2;
 }
 para.innerText = num3;});
-decimal.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}.`});
 
-function math(str)  {
-    if (str.includes('+'))  {
-        split = str.indexOf('+');
-        num1 = str.slice(0, split - 1);
-        num2 = str.splice(split + 1, -1);
-        return num3 = num1 + num2;
-    }
-    para.innerText = num3;
-}
+
 
 function add(a, b)  {
     return a + b;
