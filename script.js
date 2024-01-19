@@ -47,21 +47,38 @@ ac.addEventListener("click", (event) => {temp = para.innerText;
 erase.addEventListener("click", (event) => {str = para.innerText;
     para.innerText=`${str.slice(0, str.length - 1)}`});
 remainder.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp} % `});
+    para.innerText=`${temp}%`});
 divider.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp} / `});
+    para.innerText=`${temp}/`});
 multiplier.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp} * `});
+    para.innerText=`${temp}*`});
 minus.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp} - `});
+    para.innerText=`${temp}-`});
 plus.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp} + `});
-equal.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}`});
+    para.innerText=`${temp}+`});
+equal.addEventListener("click", (event) => {
+    str = para.innerText + ' ';
+    if (str.includes('+'))  {
+    split = str.indexOf('+');
+    num1 = str.slice(0, split);
+    num1 = Number(num1);
+    num2 = str.slice(split + 1, -1);
+    num2 = Number(num2);
+    num3 = num1 + num2;
+}
+para.innerText = num3;});
 decimal.addEventListener("click", (event) => {temp = para.innerText;
     para.innerText=`${temp}.`});
 
-
+function math(str)  {
+    if (str.includes('+'))  {
+        split = str.indexOf('+');
+        num1 = str.slice(0, split - 1);
+        num2 = str.splice(split + 1, -1);
+        return num3 = num1 + num2;
+    }
+    para.innerText = num3;
+}
 
 function add(a, b)  {
     return a + b;
