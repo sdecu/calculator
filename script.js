@@ -65,6 +65,26 @@ equal.addEventListener("click", (event) => {
     num2 = str.slice(split + 1, -1);
     num2 = Number(num2);
     num3 = num1 + num2;
+}   else if (str.includes('-'))  {
+    split = str.indexOf('-');
+    num1 = str.slice(0, split);
+    num2 = str.slice(split + 1, -1);
+    num3 = num1 - num2;
+}   else if (str.includes('*'))  {
+    split = str.indexOf('*');
+    num1 = str.slice(0, split);
+    num2 = str.slice(split + 1, -1);
+    num3 = num1 * num2;
+}   else if (str.includes('/'))  {
+    split = str.indexOf('/');
+    num1 = str.slice(0, split);
+    num2 = str.slice(split + 1, -1);
+    num3 = num1 / num2;
+}   else if (str.includes('%'))  {
+    split = str.indexOf('%');
+    num1 = str.slice(0, split);
+    num2 = str.slice(split + 1, -1);
+    num3 = num1 % num2;
 }
 para.innerText = num3;});
 decimal.addEventListener("click", (event) => {temp = para.innerText;
