@@ -46,6 +46,7 @@ ac.addEventListener("click", (event) => {temp = para.innerText;
     para.innerText=``});
 erase.addEventListener("click", (event) => {str = para.innerText;
     para.innerText=`${str.slice(0, str.length - 1)}`});
+    
 remainder.addEventListener("click", (event) => {str = para.innerText;
     if (str.includes('-')) {
         para.innerText = str.replace('-', '%');
@@ -96,8 +97,11 @@ plus.addEventListener("click", (event) => {str = para.innerText;
     } else if (str.includes('%')) {
         para.innerText = str.replace('%', '+');
     } else para.innerText=`${str}+`});
-decimal.addEventListener("click", (event) => {temp = para.innerText;
-    para.innerText=`${temp}.`});
+
+decimal.addEventListener("click", (event) => {str = para.innerText;
+    if (str.includes('.')) {
+        para.innerText = str.replace('.', '.');
+    }else para.innerText=`${str}.`});
 
 equal.addEventListener("click", (event) => {
     str = para.innerText + ' ';
@@ -118,6 +122,8 @@ equal.addEventListener("click", (event) => {
     num1 = str.slice(0, split);
     num2 = str.slice(split + 1, -1);
     num3 = num1 * num2;
+}   else if (str === '0/0')  {
+    num3 = "Fuck off!";
 }   else if (str.includes('/'))  {
     split = str.indexOf('/');
     num1 = str.slice(0, split);
